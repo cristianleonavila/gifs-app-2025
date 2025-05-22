@@ -1,6 +1,7 @@
-import { Component, computed, inject } from '@angular/core';
+import { Component, computed, inject, linkedSignal, signal } from '@angular/core';
 import { GifListComponent } from "../../components/gif-list/gif-list.component";
 import { GiphyService } from '../../services/giphy.service';
+import { GifsListItem } from '../../interfaces/gifs-list-item';
 
 @Component({
   selector: 'app-trending-page',

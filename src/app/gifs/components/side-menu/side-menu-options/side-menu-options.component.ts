@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { MenuOption } from '../menu-option';
 import { RouterLink, RouterLinkActive } from '@angular/router';
+import { GiphyService } from 'src/app/gifs/services/giphy.service';
 
 @Component({
   selector: 'app-side-menu-options',
@@ -9,6 +10,9 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   styleUrl: './side-menu-options.component.css'
 })
 export class SideMenuOptionsComponent {
+
+  gifService = inject(GiphyService);
+
   public options:MenuOption[] = [
     {
       icon: 'fa-solid fa-chart-line',
