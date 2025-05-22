@@ -3,7 +3,6 @@ import { ActivatedRoute } from '@angular/router';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { map } from 'rxjs';
 import { GiphyService } from '../../services/giphy.service';
-import { JsonPipe } from '@angular/common';
 import { GifListComponent } from '../../components/gif-list/gif-list.component';
 
 @Component({
