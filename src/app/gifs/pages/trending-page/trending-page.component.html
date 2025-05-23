@@ -1,5 +1,11 @@
-<div class="py-5">
-  <app-gif-list [images]="images()" />
-</div>
-
-
+<div class="h-screen grid overflow-y-scroll grid-cols-2 md:grid-cols-4 gap-4 pt-5"
+     (scroll)="onScroll($event);" #gifsContainer>
+  @for( group of gifService.trendingGifsGroup(); track $index) {
+    <div class="grid gap-3">
+      @for(image of group; track $index) {
+        <div>
+            <img class="h-full w-full rounded-lg object-cover" [src]="image.url" [alt]="image.title">
+        </div>
+      }
+    </div>
+  }

@@ -9,4 +9,6 @@ import { Component, input } from '@angular/core';
 export class GifsListItemComponent {
 
   url = input<string>();
+
+  title = input<string>();
 }
